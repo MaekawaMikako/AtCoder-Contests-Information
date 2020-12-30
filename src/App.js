@@ -10,23 +10,41 @@ const App = () => {
   const [displayCount, setDisplayCount] = useState(10)
   const [sort, setSort] = useState('newer')
 
+  useEffect(() =>{ 
+    getInformation()
+  }, [])
+
   // 情報取得
   const getInformation = async () => {
     try {
       const result = await axios.get(
         `${'https://kenkoooo.com/atcoder/resources/contests.json'}`
       )
-      setContestsList(result.data)
-      setDisplayList(result.data)
-      console.log(displayList)
+      result.data.sort((a, b) => {
+        if (a.start_epoch_second > b.start_epoch_second) {
+            return -1;
+        } else {
+            return 1;
+        }
+      })
+      const changedObject = objectChange(result.data)
+      setContestsList(changedObject)
+      setDisplayList(changedObject)
     } catch (error) {
       // リクエストに失敗した時の処理
       console.log('error!!')
     }
   }
-  useEffect(() =>{ 
-    getInformation()
-  }, [])
+
+  const objectChange = (e) => {
+    return e.map((time) => {
+      time.start = new Date(time.start_epoch_second * 1000).toString() // => Wed Sep 04 2019 12:03:35 GMT+0900 (日本標準時)
+      time.finish = new Date((time.start_epoch_second + time.contest.duration_second) * 1000).toString()
+      time.duration_second /= 60 // => 試験時間(分)
+      time.url = 'https://atcoder.jp/contests/' + e.id
+      console.log(time.start_epoch_second, time.duration_second)
+    })
+  }
 
   // もっと見る
   const onClickShowMore = () => {
@@ -39,27 +57,29 @@ const App = () => {
     setDisplayList(contestsList.filter((contest) => {
       if(contest.id.indexOf(e.target.value) !== -1) return true
     }))
+    console.log(e.target.value, sort)
   }
 
-  // 検索
+
+  // 検索    ok
   const keywordChange = (e) => {
     setKeyword(e.target.value)
     searchFilter(e)
   }
   const searchFilter = (e) => {
-    return setDisplayList(displayList.filter((contest) => {
-      // return contest.id.includes(e.target.value)
-      // return contest.start_epoch_second.includes(keyword)
-      // return contest.duration_second.includes(keyword)
-      // return contest.title.includes(keyword)
-      // if(contest.id.includes(keyword) || contest.start_epoch_second.includes(keyword) ||contest.duration_second.includes(keyword) || contest.title.includes(keyword)) return true
-      // if(contest.id.includes(e.target.value) !== -1 ) return true
-      // else if(contest.start_epoch_second.includes(e.target.value) !== -1) return true
-      // else if(contest.duration_second.includes(e.target.value) !== -1) return true
-      // else if(contest.title.includes(e.target.value) !== -1 ) return true
-    }))
+    // filter()で絞り込み、絞り込んだ配列をline変数に格納
+    const line = contestsList.filter((contest) => (
+      // キーワードが含まれていればtrueを返す
+      contest.id.toLowerCase().indexOf(e.target.value) >= 0
+      || contest.start_epoch_second.toString().indexOf(e.target.value) >= 0
+      || contest.duration_second.toString().indexOf(e.target.value) >= 0
+      || contest.title.toLowerCase().indexOf(e.target.value) >= 0
+    ));
+    setDisplayList(line)
+    console.log(e.target.value)
   }
 
+  
   // 表示件数
   const displayCountHandleChange = (e) => {
     setDisplayCount(e.target.value)
@@ -68,10 +88,11 @@ const App = () => {
   // 並び替え
   const sortHandleChange = (e) => {
     setSort(e.target.value)
-    sortFilter(e)
+    sortFilter(e.target.value)
+    console.log(e.target.value)
   }
   const sortFilter = (e) => {
-    if(e.target.value === 'newer'){
+    if (e === 'newer') {
       setDisplayList(displayList.sort ((a, b) => {
         if (a.start_epoch_second > b.start_epoch_second) {
             return -1;
@@ -79,7 +100,7 @@ const App = () => {
             return 1;
         }
       }))
-    }if(e.target.value === 'older'){
+    }if (e === 'older') {
       setDisplayList(displayList.sort ((a, b) => {
         if (a.start_epoch_second < b.start_epoch_second) {
             return -1;
@@ -87,7 +108,7 @@ const App = () => {
             return 1;
         }
       }))
-    }if(e.target.value === 'abcSort'){
+    }if (e === 'abcSort') {
       setDisplayList(displayList.sort ((a, b) => {
         if (a.title < b.title) {
             return -1;
@@ -117,9 +138,10 @@ const App = () => {
             <option value='joi'>JOI</option>
             <option value='jag'>JAG</option>
           </select>
-          <input  
+          <input
+            type='text'
             value = {keyword}
-            onChange = {(e) => {keywordChange(e)}} 
+            onChange= {(e) => {keywordChange(e)}} 
           />
         </div>
           
@@ -129,6 +151,7 @@ const App = () => {
           <option value='10'>10件表示</option>
           <option value='50'>50件表示</option>
           <option value='100'>100件表示</option>
+          <option value= {displayList} >全件表示</option>
         </select>
         <select onChange={sortHandleChange} value={sort}>
           <option value='newer'>新しい順</option>
@@ -137,7 +160,7 @@ const App = () => {
         </select>
 
         { displayList.map((contest, index) => {
-          if(index >= displayCount) return null
+          if (index >= displayCount) return null
           return (
             <div>
               {contest.id}
