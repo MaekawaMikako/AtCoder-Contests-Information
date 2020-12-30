@@ -1,14 +1,123 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  border-bottom: 6px double #000;
+  height: 8%;
+}
+.headerLogo{
+  margin: 0 0 0 auto;
+  margin: 0 auto;
+  font-size: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.formats{
+  margin: 0 auto 0 0;
+  float: left;
+}
+.format{
+  margin: 10px;
+  float: left;
+}
+.format input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #000;
+	border: none;
+	border-bottom: 2px solid #000;
+	background: transparent;
+}
+.placeholder{
+  color: #aaaaaa;
+}
+.formatFocus input[type='text']:focus {
+	border-bottom: 2px solid #337ab7;
+	outline: none;
+}
+.main {
+  width: 1000px;
+  margin: 150px auto;
+  padding: auto;
+  border: #337ab7 1px solid;
+  text-align: center;
+  vertical-align: auto;
+  padding-bottom: 3%;
+}
+.title{
+  height: 40px;
+  width: 95%;
+  background-color: #337ab7;
+  margin-top: 0;
+  color: #fff;
+  text-align: center;
+  vertical-align: auto;
+  padding: 2.5%;
+}
+h2{
+  margin: 0;
+  font-size: xx-large;
+}
+.contestsTable {
+  border-bottom: #ddd 1px solid;
+  margin: 40px auto;
+  padding: 40px 80px;
+}
+.contestTitle{
+  font-size: 25px;
+  color: darkblue;
+  text-decoration: none;
+}
+.contestTitle:hover{
+  font-size: 25px;
+  color: darkblue;
+  text-decoration: none;
+}
+table {
+  border-collapse:  collapse; /* セルの線を重ねる */
+  width: 70%;
+  border: #ddd 2px solid;
+  margin: 60px auto;
+  padding: 40px 100px;
+}
+tr:nth-child(odd) {
+  background-color: rgb(246, 246, 246);    /* 背景色指定 */
+}
+th,td {
+  padding: 5px 10px;          /* 余白指定 */
+  border-top: #ddd 1px solid;
+  border-collapse: collapse;/* 線を重ねる */
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+a{
+  color: #337ab7;
+}
+a:hover{
+  color: #1a4368;
+}
+
+.showMoreButton {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  background: #ddd;
+  color: #2d2d2d;
+  border: #ddd 1px solid;
+  border-radius: 3px;
+  transition: .4s;
+}
+.showMoreButton:hover {
+  background: #2d2d2d;
   color: white;
 }
