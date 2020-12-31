@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .header {
   display: flex;
   align-items: center;
@@ -8,25 +7,27 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  border-bottom: 6px double #000;
+  border-bottom: 8px double #000;
   height: 8%;
 }
 .headerLogo{
   margin: 0 0 0 auto;
-  margin: 0 auto;
   font-size: 25px;
 }
-
 .formats{
-  margin: 0 auto 0 0;
+  margin: 0 auto;
+  float: left;
+}
+.formats{
+  margin: 0 auto;
   float: left;
 }
 .format{
-  margin: 10px;
+  margin: 15px;
   float: left;
 }
 .format input[type='text'] {
-	font: 15px/24px sans-serif;
+	font: 20px sans-serif;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 0.3em;
@@ -34,15 +35,61 @@
 	letter-spacing: 1px;
 	color: #000;
 	border: none;
-	border-bottom: 2px solid #000;
+	border-bottom: 4px solid #000;
 	background: transparent;
 }
 .placeholder{
-  color: #aaaaaa;
+  color: #666666;
 }
 .formatFocus input[type='text']:focus {
-	border-bottom: 2px solid #337ab7;
+	border-bottom: 4px solid #337ab7;
 	outline: none;
+}
+.format.select {
+	overflow: hidden;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  vertical-align: auto;
+}
+.format.select select {
+	width: 100%;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.format.select select::-ms-expand {
+    display: none;
+}
+.format.select {
+	position: relative;
+  border:none;
+  /* border: 1px solid #bbbbbb; */
+	border-radius: 2px;
+	background: #ffffff;
+}
+.format.select::before {
+	position: absolute;
+	top: 20px;
+  right: 20px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #666666;
+	pointer-events: none;
+}
+.format.select select {
+  padding: 15px 20px;
+  font-size: 20px;
+	color: #000000;
 }
 .main {
   width: 1000px;
@@ -67,35 +114,39 @@ h2{
   margin: 0;
   font-size: xx-large;
 }
+.noMore{
+  margin-bottom: auto;
+  font-size: 25px;
+}
 .contestsTable {
   border-bottom: #ddd 1px solid;
   margin: 40px auto;
   padding: 40px 80px;
 }
 .contestTitle{
-  font-size: 25px;
+  font-size: 30px;
   color: darkblue;
   text-decoration: none;
 }
 .contestTitle:hover{
-  font-size: 25px;
+  font-size: 30px;
   color: darkblue;
   text-decoration: none;
 }
 table {
-  border-collapse:  collapse; /* セルの線を重ねる */
+  border-collapse: collapse;
   width: 70%;
   border: #ddd 2px solid;
   margin: 60px auto;
   padding: 40px 100px;
 }
 tr:nth-child(odd) {
-  background-color: rgb(246, 246, 246);    /* 背景色指定 */
+  background-color: rgb(246, 246, 246);
 }
 th,td {
-  padding: 5px 10px;          /* 余白指定 */
+  padding: 5px 10px;
   border-top: #ddd 1px solid;
-  border-collapse: collapse;/* 線を重ねる */
+  border-collapse: collapse;
   height: 50px;
   text-align: center;
   vertical-align: middle;
@@ -109,13 +160,14 @@ a:hover{
 
 .showMoreButton {
   display: inline-block;
-  padding: 0.3em 1em;
+  padding: 10px 30px;
   text-decoration: none;
   background: #ddd;
   color: #2d2d2d;
   border: #ddd 1px solid;
   border-radius: 3px;
   transition: .4s;
+  font-size: 18px;
 }
 .showMoreButton:hover {
   background: #2d2d2d;

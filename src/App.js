@@ -15,7 +15,7 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // 情報取得
+  // 情報取得  ok
   const getInformation = async () => {
     try {
       const result = await axios.get(
@@ -37,6 +37,7 @@ const App = () => {
     }
   }
 
+  // 日本時間、コンテスト時間　ok 
   const objectChange = (list) => {
     return list.map(contest => {
       contest.start = new Date(contest.start_epoch_second * 1000).toString()
@@ -52,15 +53,16 @@ const App = () => {
     setDisplayCount(displayCount => displayCount + 10)
   }
 
-  // 種類
+  // 種類  ok
   const typeHandleChange = (e) => {
     setType(e.target.value)
     setDisplayList(contestsList.filter((contest) => {
       return contest.id.indexOf(e.target.value) !== -1
     }))
     console.log(e.target.value, sort)
+    sortFilter(sort)
   }
-
+  
 
   // 検索    ok
   const keywordChange = (e) => {
@@ -86,7 +88,7 @@ const App = () => {
     setDisplayCount(e.target.value)
   }
 
-  // 並び替え
+  // 並び替え   ok
   const sortHandleChange = (e) => {
     setSort(e.target.value)
     sortFilter(e.target.value)
@@ -127,7 +129,8 @@ const App = () => {
         <h1 className='headerLogo'>Atcoder Contests Information</h1>
 
         <div className="formats">
-          <div className='format'>
+          {/* <p className='format'>{contestsList.length}hit</p> */}
+          <div className='format select'>
             <select　onChange={typeHandleChange} value={type}>
               <option value=''>ALL</option>
               <option value='abc'>ABC</option>
@@ -138,7 +141,7 @@ const App = () => {
               <option value='jag'>JAG</option>
             </select>
           </div>
-          <div className='format'>
+          <div className='format select'>
             <select　onChange={displayCountHandleChange} value={displayCount}>
               <option value='10'>10件表示</option>
               <option value='50'>50件表示</option>
@@ -146,8 +149,8 @@ const App = () => {
               <option value= {displayList} >全件表示</option>
             </select>
           </div>
-          <div className='format'>
-            <select onChange={sortHandleChange} value={sort}>
+          <div className='format select'>
+            <select onChange={sortHandleChange} value={sort} className="sortSelect">
               <option value='newer'>新しい順</option>
               <option value='older'>古い順</option>
               <option value='abcSort'>五十音順</option>
@@ -209,6 +212,10 @@ const App = () => {
           >
             もっと見る
           </button>
+        )}
+        
+        {displayCount >= displayList.length && (
+          <p className = 'noMore'>No more</p>
         )}
 
       </div>
