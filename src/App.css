@@ -10,12 +10,12 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  border-bottom: 8px double #000;
+  border-bottom: 6px double #000;
   height: 8%;
 }
 .headerLogo{
   margin: 0 0 0 auto;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .formats{
@@ -24,14 +24,14 @@
 }
 
 .format{
-  margin: 15px;
+  margin: 20px;
   float: left;
 }
 
 .format.select {
 	overflow: hidden;
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 35px;
   text-align: center;
   vertical-align: auto;
 }
@@ -47,7 +47,7 @@
 	appearance: none;
 }
 .format.select select::-ms-expand {
-    display: none;
+  display: none;
 }
 .format.select {
 	position: relative;
@@ -57,26 +57,26 @@
 }
 .format.select::before {
 	position: absolute;
-	top: 20px;
-  right: 18px;
+	top: 15px;
+  right: 2px;
 	width: 0;
 	height: 0;
 	padding: 0;
 	content: '';
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-top: 8px solid #666666;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
 	pointer-events: none;
 }
 .format.select select {
-  padding: 15px 20px;
-  font-size: 20px;
+  padding: 10px 15px;
+  font-size: 15px;
   font-weight: bold;
   color: #000000;
 }
 
 .format input[type='text'] {
-	font: 20px sans-serif;
+	font: 15px sans-serif;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 0.3em;
@@ -85,7 +85,7 @@
   color: #000;
   font-weight: bolder;
 	border: none;
-	border-bottom: 4px solid #000;
+	border-bottom: 3px solid #000;
 	background: transparent;
 }
 .placeholder{
@@ -97,8 +97,8 @@
 }
 
 .main {
-  width: 1200px;
-  margin: 180px auto;
+  width: 900px;
+  margin: 140px auto;
   padding: auto;
   border: #337ab7 1px solid;
   text-align: center;
@@ -107,7 +107,7 @@
 }
 
 .title{
-  height: 40px;
+  height: 35px;
   width: 95%;
   background-color: #337ab7;
   margin-top: 0;
@@ -119,36 +119,36 @@
 
 h2{
   margin: 0;
-  font-size: xx-large;
+  font-size: 25px;
 }
 
 .noMore{
   margin-bottom: auto;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .contestsTable {
   border-bottom: #ddd 1px solid;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 40px 80px;
 }
 
 .contestTitle{
-  font-size: 30px;
+  font-size: 23px;
   color: darkblue;
   text-decoration: none;
 }
 .contestTitle:hover{
-  font-size: 30px;
+  font-size: 23px;
   color: darkblue;
   text-decoration: none;
 }
 
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 90%;
   border-top: #ddd 4px solid;
-  margin: 30px auto 60px auto;
+  margin: 25px auto 60px auto;
   padding: 40px 100px;
 }
 tr:nth-child(odd) {
@@ -158,10 +158,10 @@ th,td {
   padding: 15px;
   border-bottom: #ddd 2px solid;
   border-collapse: collapse;
-  height: 50px;
+  height: 30px;
   text-align: center;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 a{
@@ -180,8 +180,9 @@ a:hover{
   border: #ddd 1px solid;
   border-radius: 3px;
   transition: .4s;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bolder;
+  margin-top: 20px;
 }
 .showMoreButton:hover {
   background: #2d2d2d;
