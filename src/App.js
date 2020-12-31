@@ -31,6 +31,8 @@ const App = () => {
       objectChange(result.data)
       setContestsList(result.data)
       setDisplayList(result.data)
+      console.log(displayCount, "first")
+      console.log("a")
     } catch (error) {
       // リクエストに失敗した時の処理
       console.log('error!!')
@@ -48,9 +50,10 @@ const App = () => {
     })
   }
 
-  // もっと見る
+  // もっと見る   ok
   const onClickShowMore = () => {
     setDisplayCount(displayCount => displayCount + 10)
+    console.log(displayCount, "more")
   }
 
   // 種類  ok
@@ -83,9 +86,10 @@ const App = () => {
   }
 
   
-  // 表示件数
+  // 表示件数  ok
   const displayCountHandleChange = (e) => {
-    setDisplayCount(e.target.value)
+    setDisplayCount(+e.target.value)
+    console.log(displayCount, "change")
   }
 
   // 並び替え   ok
@@ -129,7 +133,6 @@ const App = () => {
         <h1 className='headerLogo'>Atcoder Contests Information</h1>
 
         <div className="formats">
-          {/* <p className='format'>{contestsList.length}hit</p> */}
           <div className='format select'>
             <select　onChange={typeHandleChange} value={type}>
               <option value=''>ALL</option>

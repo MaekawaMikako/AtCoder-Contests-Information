@@ -1,4 +1,7 @@
 @charset "utf-8";
+.App{
+  font-family: "Lato", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo",arial, sans-serif;
+}
 .header {
   display: flex;
   align-items: center;
@@ -14,37 +17,17 @@
   margin: 0 0 0 auto;
   font-size: 25px;
 }
+
 .formats{
   margin: 0 auto;
   float: left;
 }
-.formats{
-  margin: 0 auto;
-  float: left;
-}
+
 .format{
   margin: 15px;
   float: left;
 }
-.format input[type='text'] {
-	font: 20px sans-serif;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0.3em;
-	transition: 0.3s;
-	letter-spacing: 1px;
-	color: #000;
-	border: none;
-	border-bottom: 4px solid #000;
-	background: transparent;
-}
-.placeholder{
-  color: #666666;
-}
-.formatFocus input[type='text']:focus {
-	border-bottom: 4px solid #337ab7;
-	outline: none;
-}
+
 .format.select {
 	overflow: hidden;
   width: 150px;
@@ -89,8 +72,31 @@
 .format.select select {
   padding: 15px 20px;
   font-size: 20px;
-	color: #000000;
+  font-weight: bold;
+  color: #000000;
 }
+
+.format input[type='text'] {
+	font: 20px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+  color: #000;
+  font-weight: bold;
+	border: none;
+	border-bottom: 4px solid #000;
+	background: transparent;
+}
+.placeholder{
+  color: #666666;
+}
+.formatFocus input[type='text']:focus {
+	border-bottom: 4px solid #337ab7;
+	outline: none;
+}
+
 .main {
   width: 1000px;
   margin: 150px auto;
@@ -100,6 +106,7 @@
   vertical-align: auto;
   padding-bottom: 3%;
 }
+
 .title{
   height: 40px;
   width: 95%;
@@ -110,19 +117,23 @@
   vertical-align: auto;
   padding: 2.5%;
 }
+
 h2{
   margin: 0;
   font-size: xx-large;
 }
+
 .noMore{
   margin-bottom: auto;
   font-size: 25px;
 }
+
 .contestsTable {
   border-bottom: #ddd 1px solid;
   margin: 40px auto;
   padding: 40px 80px;
 }
+
 .contestTitle{
   font-size: 30px;
   color: darkblue;
@@ -133,6 +144,7 @@ h2{
   color: darkblue;
   text-decoration: none;
 }
+
 table {
   border-collapse: collapse;
   width: 70%;
@@ -151,6 +163,7 @@ th,td {
   text-align: center;
   vertical-align: middle;
 }
+
 a{
   color: #337ab7;
 }
@@ -163,11 +176,12 @@ a:hover{
   padding: 10px 30px;
   text-decoration: none;
   background: #ddd;
-  color: #2d2d2d;
+  color: #666666;
   border: #ddd 1px solid;
   border-radius: 3px;
   transition: .4s;
   font-size: 18px;
+  font-weight: bolder;
 }
 .showMoreButton:hover {
   background: #2d2d2d;
