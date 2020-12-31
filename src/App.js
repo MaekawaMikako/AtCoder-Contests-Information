@@ -44,7 +44,7 @@ const App = () => {
     return list.map(contest => {
       contest.start = new Date(contest.start_epoch_second * 1000).toString()
       contest.start = contest.start.replace(' GMT+0900 (日本標準時)', '')
-      contest.duration_second =  contest.duration_second / 60 + '分'// => 試験時間(分)
+      contest.duration_second =  contest.duration_second / 60 + 'min'// => 試験時間(分)
       contest.url = 'https://atcoder.jp/contests/' + contest.id
       return contest
     })
@@ -66,7 +66,6 @@ const App = () => {
     sortFilter(sort)
   }
   
-
   // 検索    ok
   const keywordChange = (e) => {
     setKeyword(e.target.value)
@@ -149,7 +148,7 @@ const App = () => {
               <option value='10'>10件表示</option>
               <option value='50'>50件表示</option>
               <option value='100'>100件表示</option>
-              <option value= {displayList} >全件表示</option>
+              <option value= {displayList.length} >全件表示</option>
             </select>
           </div>
           <div className='format select'>
@@ -165,7 +164,7 @@ const App = () => {
               className='textFormat'
               type = 'text'
               value = {keyword}
-              placeholder = 'keyword'
+              placeholder = 'Keyword'
               onChange= {(e) => {keywordChange(e)}} 
             />
             </label>
@@ -187,15 +186,15 @@ const App = () => {
               <table>
                 <tbody>
                     <tr>
-                        <th>開始時刻</th>
+                        <th>Start Time</th>
                         <td>{contest.start}</td>
                     </tr>
                     <tr>
-                        <th>コンテスト時間</th>
+                        <th>Duration</th>
                         <td>{contest.duration_second}</td>
                     </tr>
                     <tr>
-                        <th>レート変化</th>
+                        <th>Rated Range</th>
                         <td>{contest.rate_change}</td>
                     </tr>
                     <tr>
@@ -213,7 +212,7 @@ const App = () => {
             className = 'showMoreButton'
             onClick = {() => {onClickShowMore()}}
           >
-            もっと見る
+            More...
           </button>
         )}
         

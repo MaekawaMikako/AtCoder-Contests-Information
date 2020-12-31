@@ -52,14 +52,13 @@
 .format.select {
 	position: relative;
   border:none;
-  /* border: 1px solid #bbbbbb; */
 	border-radius: 2px;
 	background: #ffffff;
 }
 .format.select::before {
 	position: absolute;
 	top: 20px;
-  right: 20px;
+  right: 18px;
 	width: 0;
 	height: 0;
 	padding: 0;
@@ -84,7 +83,7 @@
 	transition: 0.3s;
 	letter-spacing: 1px;
   color: #000;
-  font-weight: bold;
+  font-weight: bolder;
 	border: none;
 	border-bottom: 4px solid #000;
 	background: transparent;
@@ -98,8 +97,8 @@
 }
 
 .main {
-  width: 1000px;
-  margin: 150px auto;
+  width: 1200px;
+  margin: 180px auto;
   padding: auto;
   border: #337ab7 1px solid;
   text-align: center;
@@ -147,21 +146,22 @@ h2{
 
 table {
   border-collapse: collapse;
-  width: 70%;
-  border: #ddd 2px solid;
-  margin: 60px auto;
+  width: 80%;
+  border-top: #ddd 4px solid;
+  margin: 30px auto 60px auto;
   padding: 40px 100px;
 }
 tr:nth-child(odd) {
   background-color: rgb(246, 246, 246);
 }
 th,td {
-  padding: 5px 10px;
-  border-top: #ddd 1px solid;
+  padding: 15px;
+  border-bottom: #ddd 2px solid;
   border-collapse: collapse;
   height: 50px;
   text-align: center;
   vertical-align: middle;
+  font-size: 20px;
 }
 
 a{
