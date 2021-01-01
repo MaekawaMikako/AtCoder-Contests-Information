@@ -114,7 +114,7 @@ const App = () => {
     if (e === 'newer') {
       setDisplayList(displayList => displayList.sort ((a, b) => {
         if (a.start_epoch_second > b.start_epoch_second) {
-            return -1;
+          return -1;
         } else {
           return 1;
         }
@@ -202,22 +202,22 @@ const App = () => {
               <h3><a href={contest.url} className='contestTitle'　target="_blank" rel="noopener noreferrer">{contest.title}</a></h3>
               <table>
                 <tbody>
-                    <tr>
-                        <th>Start Time</th>
-                        <td>{contest.start}</td>
-                    </tr>
-                    <tr>
-                        <th>Duration</th>
-                        <td>{contest.duration_second}</td>
-                    </tr>
-                    <tr>
-                        <th>Rated Range</th>
-                        <td>{contest.rate_change}</td>
-                    </tr>
-                    <tr>
-                        <th>URL</th>
-                        <td><a href={contest.url}　target="_blank" rel="noopener noreferrer">{contest.url}</a></td>
-                    </tr>
+                  <tr>
+                    <th>Start Time</th>
+                    <td>{contest.start}</td>
+                  </tr>
+                  <tr>
+                    <th>Duration</th>
+                    <td>{contest.duration_second}</td>
+                  </tr>
+                  <tr>
+                    <th>Rated Range</th>
+                    <td>{contest.rate_change}</td>
+                  </tr>
+                  <tr>
+                    <th>URL</th>
+                    <td><a href={contest.url}　target="_blank" rel="noopener noreferrer">{contest.url}</a></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
