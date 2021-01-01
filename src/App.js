@@ -82,6 +82,7 @@ const App = () => {
     setKeyword(e.target.value)
     searchFilter(e.target.value)
   }
+
   const searchFilter = (e) => {
     // filter()で絞り込み、絞り込んだ配列をline変数に格納
     const line = contestsList.filter((contest) => (
@@ -95,7 +96,6 @@ const App = () => {
     setDisplayList(line)
     console.log(e)
   }
-
   
   // 表示件数  ok
   const displayCountHandleChange = (e) => {
@@ -109,6 +109,7 @@ const App = () => {
     sortFilter(e.target.value)
     console.log(e.target.value)
   }
+  
   const sortFilter = (e) => {
     if (e === 'newer') {
       setDisplayList(displayList => displayList.sort ((a, b) => {
