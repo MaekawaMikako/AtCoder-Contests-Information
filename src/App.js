@@ -45,7 +45,7 @@ const App = () => {
       contest.start = new Date(contest.start_epoch_second * 1000).toString()
       contest.start = contest.start.replace(' GMT+0900 (日本標準時)', '')
       contest.duration_second =  contest.duration_second / 60 + 'min'// => 試験時間(分)
-      contest.url = 'https://atcoder.jp/contests/' + contest.id
+      contest.url = 'https://atcoder.jp/' + contest.id
       return contest
     })
   }
@@ -182,7 +182,7 @@ const App = () => {
           if (index >= displayCount) return null
           return (
             <div className="contestsTable">
-              <h3><a href="{contest.url}" className='contestTitle'　target="_blank" rel="noopener noreferrer">{contest.title}</a></h3>
+              <h3><a href={contest.url} className='contestTitle'　target="_blank" rel="noopener noreferrer">{contest.title}</a></h3>
               <table>
                 <tbody>
                     <tr>
@@ -199,7 +199,7 @@ const App = () => {
                     </tr>
                     <tr>
                         <th>URL</th>
-                        <td><a href="{contest.url}"　target="_blank" rel="noopener noreferrer">{contest.url}</a></td>
+                        <td><a href={contest.url}　target="_blank" rel="noopener noreferrer">{contest.url}</a></td>
                     </tr>
                 </tbody>
               </table>

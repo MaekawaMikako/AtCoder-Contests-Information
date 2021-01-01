@@ -1,190 +1,305 @@
 @charset "utf-8";
-.App{
-  font-family: "Lato", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo",arial, sans-serif;
-}
-.header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  border-bottom: 6px double #000;
-  height: 8%;
-}
-.headerLogo{
-  margin: 0 0 0 auto;
-  font-size: 18px;
+@media screen and (min-width:0px){
+  /*0px以上で適用する内容*/
+  .App{
+    font-family: "Lato", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo",arial, sans-serif;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 5px double #000;
+    height: 10%;
+  }
+  .headerLogo{
+    margin: 0 0 0 3px;
+    font-size: 15px;
+  }
+  .format{
+    margin: 5px;
+  }
+  .format.select {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: auto;
+    position: relative;
+    border: none;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+  .format.select::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    pointer-events: none;
+  }
+  .format.select select {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .format.select select::-ms-expand {
+    display: none;
+  }
+  .format input[type='text'] {
+    font: 14px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: bolder;
+    border: none;
+    border-bottom: 3px solid #000;
+    background: transparent;
+  }
+  .formatFocus input[type='text']:focus {
+    border-bottom: 3px solid #337ab7;
+    outline: none;
+  }
+  .placeholder{
+    color: #666666;
+  }
+
+  .main {
+    border: #337ab7 1px solid;
+    text-align: center;
+    vertical-align: auto;
+    padding-bottom: 3%;
+    margin: auto;
+    padding-top: 18%;
+  }
+
+  .title{
+    height: 50px;
+    background-color: #337ab7;
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+    vertical-align: auto;
+  }
+
+  h2{
+    margin: 0;
+    font-size: 20px;
+    padding: 5%;
+  }
+
+  .noMore{
+    margin-bottom: auto;
+    font-size: 20px;
+  }
+
+  .contestsTable {
+    border-bottom: #ddd 1px solid;
+    margin: auto 10px 0px 10px;
+    padding: 0px 10px;
+  }
+
+  .contestTitle{
+    font-size: 15px;
+    color: darkblue;
+    text-decoration: none;
+  }
+  .contestTitle:hover{
+    font-size: 14px;
+    color: darkblue;
+    text-decoration: none;
+  }
+
+  table {
+    margin: 10px auto 30px auto;
+    padding: 8px 30px;
+    border-collapse: collapse;
+    border-top: #ddd 4px solid;
+    padding: 40px 100px;
+  }
+  tr:nth-child(odd) {
+    background-color: rgb(246, 246, 246);
+  }
+  th,td {
+    padding: 8px;
+    border-bottom: #ddd 2px solid;
+    border-collapse: collapse;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+  }
+
+  a{
+    color: #337ab7;
+  }
+  a:hover{
+    color: #1a4368;
+  }
+
+  .showMoreButton {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background: #ddd;
+    color: #666666;
+    border: #ddd 1px solid;
+    border-radius: 3px;
+    transition: .4s;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-top: 20px;
+  }
+  .showMoreButton:hover {
+    background: #2d2d2d;
+    color: white;
+  }
 }
 
-.formats{
-  margin: 0 auto;
-  float: left;
+@media screen and (min-width:500px){
+  /*500px以上で適用する内容*/
+  .header {
+    height: 7%;
+  }
+  .headerLogo{
+    margin: auto;
+    font-size: 18px;
+  }
+
+  .formats{
+    margin: 0 auto;
+    float: left;
+  }
+
+  .format{
+    margin: 20px;
+    float: left;
+  }
+
+  .format.select select {
+    padding: 10px 0px;
+  }
+
+  .main {
+    width: 500px;
+    margin: 140px auto;
+    padding-top: 0;
+  }
+
+  .title{
+    height: 35px;
+    width: 95%;
+    padding: 2.5%;
+  }
+
+  h2{
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  .contestsTable {
+    margin: 10px auto;
+    padding: 30px 60px;
+  }
+
+  .contestTitle{
+    font-size: 18px;
+  }
+
+  .contestTitle:hover{
+    font-size: 18px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 25px auto 30px auto;
+    padding: 20px 100px;
+  }
+
+  th,td {
+    padding: 15px;
+    font-size: 14px;
+  }
 }
 
-.format{
-  margin: 20px;
-  float: left;
-}
+@media screen and (min-width:1000px){
+  /*1000px以上で適用する内容*/
+  .header {
+    border-bottom: 6px double #000;
+    height: 8%;
+  }
+  .headerLogo{
+    margin: 0 0 0 auto;
+  }
 
-.format.select {
-	overflow: hidden;
-  width: 100px;
-  height: 35px;
-  text-align: center;
-  vertical-align: auto;
-}
-.format.select select {
-	width: 100%;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: transparent;
-	background-image: none;
-	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
-}
-.format.select select::-ms-expand {
-  display: none;
-}
-.format.select {
-	position: relative;
-  border:none;
-	border-radius: 2px;
-	background: #ffffff;
-}
-.format.select::before {
-	position: absolute;
-	top: 15px;
-  right: 2px;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-  border-top: 6px solid #666666;
-	pointer-events: none;
-}
-.format.select select {
-  padding: 10px 15px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #000000;
-}
+  .formats{
+    margin: 0 auto;
+    float: left;
+  }
 
-.format input[type='text'] {
-	font: 15px sans-serif;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0.3em;
-	transition: 0.3s;
-	letter-spacing: 1px;
-  color: #000;
-  font-weight: bolder;
-	border: none;
-	border-bottom: 3px solid #000;
-	background: transparent;
-}
-.placeholder{
-  color: #666666;
-}
-.formatFocus input[type='text']:focus {
-	border-bottom: 4px solid #337ab7;
-	outline: none;
-}
+  .format{
+    margin: 20px;
+  }
 
-.main {
-  width: 900px;
-  margin: 140px auto;
-  padding: auto;
-  border: #337ab7 1px solid;
-  text-align: center;
-  vertical-align: auto;
-  padding-bottom: 3%;
-}
+  .format.select {
+    width: 100px;
+    height: 35px;
+  }
 
-.title{
-  height: 35px;
-  width: 95%;
-  background-color: #337ab7;
-  margin-top: 0;
-  color: #fff;
-  text-align: center;
-  vertical-align: auto;
-  padding: 2.5%;
-}
+  .format.select::before {
+    top: 15px;
+    right: 2px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+  }
+  .format.select select {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+  }
 
-h2{
-  margin: 0;
-  font-size: 25px;
-}
+  .format input[type='text'] {
+    font: 15px;
+  }
 
-.noMore{
-  margin-bottom: auto;
-  font-size: 20px;
-}
+  .main {
+    width: 900px;
+  }
 
-.contestsTable {
-  border-bottom: #ddd 1px solid;
-  margin: 10px auto;
-  padding: 40px 80px;
-}
+  .contestsTable {
+    margin: 10px auto;
+    padding: 40px 80px;
+  }
 
-.contestTitle{
-  font-size: 23px;
-  color: darkblue;
-  text-decoration: none;
-}
-.contestTitle:hover{
-  font-size: 23px;
-  color: darkblue;
-  text-decoration: none;
-}
+  .contestTitle{
+    font-size: 23px;
+  }
 
-table {
-  border-collapse: collapse;
-  width: 90%;
-  border-top: #ddd 4px solid;
-  margin: 25px auto 60px auto;
-  padding: 40px 100px;
-}
-tr:nth-child(odd) {
-  background-color: rgb(246, 246, 246);
-}
-th,td {
-  padding: 15px;
-  border-bottom: #ddd 2px solid;
-  border-collapse: collapse;
-  height: 30px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 15px;
-}
+  .contestTitle:hover{
+    font-size: 23px;
+  }
 
-a{
-  color: #337ab7;
-}
-a:hover{
-  color: #1a4368;
-}
+  table {
+    border-collapse: collapse;
+    margin: 25px auto 60px auto;
+    padding: 40px 100px;
+  }
 
-.showMoreButton {
-  display: inline-block;
-  padding: 10px 30px;
-  text-decoration: none;
-  background: #ddd;
-  color: #666666;
-  border: #ddd 1px solid;
-  border-radius: 3px;
-  transition: .4s;
-  font-size: 15px;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-.showMoreButton:hover {
-  background: #2d2d2d;
-  color: white;
+  th,td {
+    height: 30px;
+    font-size: 15px;
+  }
 }
