@@ -10,7 +10,7 @@ const App = () => {
   const [displayCount, setDisplayCount] = useState(10)
   const [sort, setSort] = useState('newer')
 
-  useEffect(() =>{ 
+  useEffect(() => { 
     getInformation()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -63,7 +63,7 @@ const App = () => {
       setDisplayList(contestsList.filter((contest) => {
         return contest.id.indexOf(e.target.value) !== -1
       }))
-    }else {
+    } else {
       setDisplayList(contestsList.filter((contest) => {
         return ( contest.id.indexOf(e.target.value) !== -1
           && (contest.id.toLowerCase().indexOf(keyword) >= 0
