@@ -23,9 +23,9 @@ const App = () => {
       )
       result.data.sort((a, b) => {
         if (a.start_epoch_second > b.start_epoch_second) {
-            return -1;
+          return -1;
         } else {
-            return 1;
+          return 1;
         }
       })
       objectChange(result.data)
@@ -116,23 +116,27 @@ const App = () => {
         if (a.start_epoch_second > b.start_epoch_second) {
             return -1;
         } else {
-            return 1;
+          return 1;
         }
       }))
-    }if (e === 'older') {
+    }
+
+    if (e === 'older') {
       setDisplayList(displayList => displayList.sort ((a, b) => {
         if (a.start_epoch_second < b.start_epoch_second) {
-            return -1;
+          return -1;
         } else {
-            return 1;
+          return 1;
         }
       }))
-    }if (e === 'abcSort') {
+    }
+    
+    if (e === 'abcSort') {
       setDisplayList(displayList => displayList.sort ((a, b) => {
         if (a.title < b.title) {
-            return -1;
+          return -1;
         } else {
-            return 1;
+          return 1;
         }
       }))
     }
