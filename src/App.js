@@ -45,7 +45,7 @@ const App = () => {
       contest.start = new Date(contest.start_epoch_second * 1000).toString()
       contest.start = contest.start.replace(' GMT+0900 (日本標準時)', '')
       contest.duration_second =  contest.duration_second / 60 + 'min'// => 試験時間(分)
-      contest.url = 'https://atcoder.jp/' + contest.id
+      contest.url = 'https://atcoder.jp/contests/' + contest.id
       return contest
     })
   }
@@ -59,9 +59,20 @@ const App = () => {
   // 種類  ok
   const typeHandleChange = (e) => {
     setType(e.target.value)
-    setDisplayList(contestsList.filter((contest) => {
-      return contest.id.indexOf(e.target.value) !== -1
-    }))
+    if(displayList.length === contestsList.length) {
+      setDisplayList(contestsList.filter((contest) => {
+        return contest.id.indexOf(e.target.value) !== -1
+      }))
+    }else {
+      setDisplayList(contestsList.filter((contest) => {
+        return ( contest.id.indexOf(e.target.value) !== -1
+          && (contest.id.toLowerCase().indexOf(keyword) >= 0
+          || contest.start.toString().indexOf(keyword) >= 0
+          || contest.duration_second.toString().indexOf(keyword) >= 0
+          || contest.title.toLowerCase().indexOf(keyword) >= 0
+        ))
+      }))
+    }
     console.log(e.target.value, sort)
     sortFilter(sort)
   }
@@ -69,19 +80,20 @@ const App = () => {
   // 検索    ok
   const keywordChange = (e) => {
     setKeyword(e.target.value)
-    searchFilter(e)
+    searchFilter(e.target.value)
   }
   const searchFilter = (e) => {
     // filter()で絞り込み、絞り込んだ配列をline変数に格納
     const line = contestsList.filter((contest) => (
       // キーワードが含まれていればtrueを返す
-      contest.id.toLowerCase().indexOf(e.target.value) >= 0
-      || contest.start.toString().indexOf(e.target.value) >= 0
-      || contest.duration_second.toString().indexOf(e.target.value) >= 0
-      || contest.title.toLowerCase().indexOf(e.target.value) >= 0
-    ));
+      ( contest.id.toLowerCase().indexOf(e) >= 0
+      || contest.start.toString().indexOf(e) >= 0
+      || contest.duration_second.toString().indexOf(e) >= 0
+      || contest.title.toLowerCase().indexOf(e) >= 0 )
+      && contest.id.indexOf(type) !== -1
+    ))
     setDisplayList(line)
-    console.log(e.target.value)
+    console.log(e)
   }
 
   
