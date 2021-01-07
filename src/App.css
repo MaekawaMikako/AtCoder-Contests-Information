@@ -15,7 +15,7 @@
     border-bottom: 5px double #000;
     height: 10%;
   }
-  .headerLogo{
+  .header-logo {
     margin: 0 0 0 3px;
     font-size: 15px;
   }
@@ -67,11 +67,11 @@
     border-bottom: 3px solid #000;
     background: transparent;
   }
-  .formatFocus input[type='text']:focus {
+  .format-focus input[type='text']:focus {
     border-bottom: 3px solid #337ab7;
     outline: none;
   }
-  .placeholder{
+  .placeholder {
     color: #666666;
   }
 
@@ -84,7 +84,7 @@
     padding-top: 18%;
   }
 
-  .title{
+  .title {
     height: 50px;
     background-color: #337ab7;
     margin-top: 0;
@@ -93,29 +93,29 @@
     vertical-align: auto;
   }
 
-  h2{
+  h2 {
     margin: 0;
     font-size: 20px;
     padding: 5%;
   }
 
-  .noMore{
+  .no-more {
     margin-bottom: auto;
     font-size: 20px;
   }
 
-  .contestsTable {
+  .contests-table {
     border-bottom: #ddd 1px solid;
     margin: auto 10px 0px 10px;
     padding: 0px 10px;
   }
 
-  .contestTitle{
+  .contest-title {
     font-size: 15px;
     color: darkblue;
     text-decoration: none;
   }
-  .contestTitle:hover{
+  .contest-title:hover {
     font-size: 14px;
     color: darkblue;
     text-decoration: none;
@@ -141,14 +141,14 @@
     font-size: 13px;
   }
 
-  a{
+  a {
     color: #337ab7;
   }
-  a:hover{
+  a:hover {
     color: #1a4368;
   }
 
-  .showMoreButton {
+  .show-more-button {
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
@@ -161,28 +161,28 @@
     font-weight: bolder;
     margin-top: 20px;
   }
-  .showMoreButton:hover {
+  .show-more-button:hover {
     background: #2d2d2d;
     color: white;
   }
 }
 
-@media screen and (min-width:500px){
+@media screen and (min-width:500px) {
   /*500px以上で適用する内容*/
   .header {
     height: 7%;
   }
-  .headerLogo{
+  .header-logo {
     margin: auto;
     font-size: 18px;
   }
 
-  .formats{
+  .formats {
     margin: 0 auto;
     float: left;
   }
 
-  .format{
+  .format {
     margin: 20px;
     float: left;
   }
@@ -197,27 +197,27 @@
     padding-top: 0;
   }
 
-  .title{
+  .title {
     height: 35px;
     width: 95%;
     padding: 2.5%;
   }
 
-  h2{
+  h2 {
     font-size: 25px;
     padding: 5px;
   }
 
-  .contestsTable {
+  .contests-table {
     margin: 10px auto;
     padding: 30px 60px;
   }
 
-  .contestTitle{
+  .contest-title {
     font-size: 18px;
   }
 
-  .contestTitle:hover{
+  .contest-title:hover {
     font-size: 18px;
   }
 
@@ -234,22 +234,22 @@
   }
 }
 
-@media screen and (min-width:1000px){
+@media screen and (min-width:1000px) {
   /*1000px以上で適用する内容*/
   .header {
     border-bottom: 6px double #000;
     height: 8%;
   }
-  .headerLogo{
+  .header-logo {
     margin: 0 0 0 auto;
   }
 
-  .formats{
+  .formats {
     margin: 0 auto;
     float: left;
   }
 
-  .format{
+  .format {
     margin: 20px;
   }
 
@@ -279,16 +279,16 @@
     width: 900px;
   }
 
-  .contestsTable {
+  .contests-table {
     margin: 10px auto;
     padding: 40px 80px;
   }
 
-  .contestTitle{
+  .contest-title {
     font-size: 23px;
   }
 
-  .contestTitle:hover{
+  .contest-title:hover {
     font-size: 23px;
   }
 
