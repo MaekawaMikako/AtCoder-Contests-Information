@@ -4,20 +4,20 @@ const Main = (props) => {
     // もっと見る   ok
     const onClickShowMore = () => {
         props.setDisplayCount(props.displayCount + 10)
-        console.log(props.displayCount, "more")
+        console.log(props.displayCount, 'more')
     }
 
     return (
-        <div className='main'>
-            <div className='title'>
+        <div class='main'>
+            <div class='title'>
                 <h2>Information about the contests</h2>
             </div>
 
             {props.displayList.map((contest, index) => {
                 if (index >= props.displayCount) return null
                 return (
-                    <div className="contests-table">
-                        <h3><a href={contest.url} className='contest-title' target="_blank" rel="noopener noreferrer">{contest.title}</a></h3>
+                    <div class='contests-table'>
+                        <h3><a href={contest.url} class='contest-title' target='_blank' rel='noopener noreferrer'>{contest.title}</a></h3>
                         <table>
                             <tbody>
                                 <tr>
@@ -34,7 +34,7 @@ const Main = (props) => {
                                 </tr>
                                 <tr>
                                     <th>URL</th>
-                                    <td><a href={contest.url} target="_blank" rel="noopener noreferrer">{contest.url}</a></td>
+                                    <td><a href={contest.url} target='_blank' rel='noopener noreferrer'>{contest.url}</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -44,7 +44,7 @@ const Main = (props) => {
 
             {props.displayCount < props.displayList.length && (
                 <button
-                    className='show-more-button'
+                    class='show-more-button'
                     onClick={() => { onClickShowMore() }}
                 >
                     More...
@@ -52,7 +52,7 @@ const Main = (props) => {
             )}
 
             {props.displayCount >= props.displayList.length && (
-                <p className='no-more'>No more</p>
+                <p class='no-more'>No more</p>
             )}
 
         </div>

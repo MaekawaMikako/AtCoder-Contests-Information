@@ -26,7 +26,7 @@ const App = () => {
       objectChange(result.data)
       setContestsList(result.data)
       setDisplayList(result.data)
-      console.log(displayCount, "first")
+      console.log(displayCount, 'first')
     } catch (error) {
       // リクエストに失敗した時の処理
       console.log('error!!')
@@ -36,7 +36,7 @@ const App = () => {
   // 日本時間、コンテスト時間　ok 
   const objectChange = (list) => {
     return list.map(contest => {
-      contest.start = moment.unix(contest.start_epoch_second).format("YYYY-MM-DD HH:mm")
+      contest.start = moment.unix(contest.start_epoch_second).format('YYYY-MM-DD HH:mm')
       contest.duration_second = contest.duration_second / 60 + 'min'// => 試験時間(分)
       contest.url = `https://atcoder.jp/contests/${contest.id}`
       return contest
@@ -50,7 +50,7 @@ const App = () => {
 
 
   return (
-    <div className="App">
+    <div class='App'>
       <Header contestsList={contestsList} setContestsList={setContestsList} displayList={displayList} setDisplayList={setDisplayList} displayCount={displayCount} setDisplayCount={setDisplayCount} />
       <Main contestsList={contestsList} setContestsList={setContestsList} displayList={displayList} setDisplayList={setDisplayList} displayCount={displayCount} setDisplayCount={setDisplayCount} />
     </div>

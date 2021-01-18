@@ -38,7 +38,7 @@ const Header = (props) => {
     // 表示件数
     const displayCountHandleChange = (count) => {
         props.setDisplayCount(+count.target.value)
-        console.log(props.displayCount, "count")
+        console.log(props.displayCount, 'count')
     }
 
     // 並び替え   ok
@@ -80,47 +80,51 @@ const Header = (props) => {
     }
 
     return (
-        <div className='header'>
-            <h1 className='header-logo'>Atcoder Contests Information</h1>
+        <div class='header'>
+            <h1 class='header-logo'>Atcoder Contests Information</h1>
 
-            <div className="formats">
-                <div className='format select'>
-                    <select onChange={typeHandleChange} value={type}>
-                        <option value=''>ALL</option>
-                        <option value='abc'>ABC</option>
-                        <option value='arc'>ARC</option>
-                        <option value='agc'>AGC</option>
-                        <option value='past'>PAST</option>
-                        <option value='joi'>JOI</option>
-                        <option value='jag'>JAG</option>
-                    </select>
-                </div>
-                <div className='format select'>
-                    <select onChange={displayCountHandleChange} value={props.displayCount}>
-                        <option value='10'>10件表示</option>
-                        <option value='50'>50件表示</option>
-                        <option value='100'>100件表示</option>
-                        <option value={props.displayList.length} >全件表示</option>
-                    </select>
-                </div>
-                <div className='format select'>
-                    <select onChange={sortHandleChange} value={sort} className="sortSelect">
-                        <option value='newer'>新しい順</option>
-                        <option value='older'>古い順</option>
-                        <option value='abcSort'>五十音順</option>
-                    </select>
-                </div>
-                <div className='format'>
-                    <label class="format-focus">
-                        <input
-                            className='text-format'
-                            type='text'
-                            value={keyword}
-                            placeholder='Keyword'
-                            onChange={(text) => { keywordChange(text) }}
-                        />
-                    </label>
-                    <span class="focus_line"></span>
+            <div class="drawer">
+                <input type="checkbox" id="drawer-check" class="drawer-hidden" />
+                <label for="drawer-check" class="drawer-open"><span></span></label>
+                <div class='formats'>
+                    <div class='format select'>
+                        <select onChange={typeHandleChange} value={type}>
+                            <option value=''>ALL</option>
+                            <option value='abc'>ABC</option>
+                            <option value='arc'>ARC</option>
+                            <option value='agc'>AGC</option>
+                            <option value='past'>PAST</option>
+                            <option value='joi'>JOI</option>
+                            <option value='jag'>JAG</option>
+                        </select>
+                    </div>
+                    <div class='format select'>
+                        <select onChange={displayCountHandleChange} value={props.displayCount}>
+                            <option value='10'>10件表示</option>
+                            <option value='50'>50件表示</option>
+                            <option value='100'>100件表示</option>
+                            <option value={props.displayList.length} >全件表示</option>
+                        </select>
+                    </div>
+                    <div class='format select'>
+                        <select onChange={sortHandleChange} value={sort} class='sort-select'>
+                            <option value='newer'>新しい順</option>
+                            <option value='older'>古い順</option>
+                            <option value='abcSort'>五十音順</option>
+                        </select>
+                    </div>
+                    <div class='format'>
+                        <label class='format-focus'>
+                            <input
+                                class='text-format'
+                                type='text'
+                                value={keyword}
+                                placeholder='Keyword'
+                                onChange={(text) => { keywordChange(text) }}
+                            />
+                        </label>
+                        <span class='focus_line'></span>
+                    </div>
                 </div>
             </div>
         </div>
