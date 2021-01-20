@@ -55,7 +55,6 @@
       list-style: none;
       display: block;
       width: 50%;
-      font-size: 15px;
       box-sizing: border-box;
       color:#ffffff;
       text-decoration: none;
@@ -66,7 +65,6 @@
       margin: 15px 10px;
     }
     .form input[type='text'] {
-      font: 14px sans-serif;
       margin: 10px;
     }
     #drawer-check:checked ~ .forms {
@@ -93,6 +91,9 @@
     }
     .drawer-hidden {
         display: none;
+    }
+    .form {
+      font-size: 16px;
     }
     .form.select {
         overflow: hidden;
@@ -141,6 +142,7 @@
         border: none;
         border-bottom: 3px solid #000;
         background: transparent;
+        font: 16px sans-serif;
     }
     .form-focus input[type='text']:focus {
         border-bottom: 3px solid #337ab7;
@@ -183,12 +185,8 @@
     }
     .form.select select {
       padding: 10px 15px;
-      font-size: 15px;
     }
     .form.select select::-ms-expand {
       display: none;
-    }
-    .form input[type='text'] {
-      font: 15px sans-serif;
     }
 }
