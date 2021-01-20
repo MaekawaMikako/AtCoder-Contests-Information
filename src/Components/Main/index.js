@@ -27,12 +27,12 @@ const Main = (props) => {
                     class='show-more-button'
                     onClick={() => { onClickShowMore() }}
                 >
-                    More...
+                    もっと見る
                 </button>
             )}
 
             {props.displayCount >= props.displayList.length && (
-                <p class='no-more'>No more</p>
+                <p class='no-more'>これ以上該当ページはありません</p>
             )}
 
         </div>
