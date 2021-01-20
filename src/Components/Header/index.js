@@ -90,9 +90,8 @@ const Header = (props) => {
             <div class="drawer">
                 <input type="checkbox" id="drawer-check" class="drawer-hidden" />
                 <label for="drawer-check" class="drawer-open"><span></span></label>
-                {/* forms */}
-                <div class='formats'>
-                    <div class='format select'>
+                <div class='forms'>
+                    <div class='form select'>
                         <select onChange={typeHandleChange} value={type}>
                             <option value=''>ALL</option>
                             <option value='abc'>ABC</option>
@@ -103,7 +102,7 @@ const Header = (props) => {
                             <option value='jag'>JAG</option>
                         </select>
                     </div>
-                    <div class='format select'>
+                    <div class='form select'>
                         <select onChange={displayCountHandleChange} value={props.displayCount}>
                             <option value='10'>10件表示</option>
                             <option value='50'>50件表示</option>
@@ -111,17 +110,16 @@ const Header = (props) => {
                             <option value={props.displayList.length} >全件表示</option>
                         </select>
                     </div>
-                    <div class='format select'>
+                    <div class='form select'>
                         <select onChange={sortHandleChange} value={sort} class='sort-select'>
                             <option value='newer'>新しい順</option>
                             <option value='older'>古い順</option>
                             <option value='abcSort'>五十音順</option>
                         </select>
                     </div>
-                    <div class='format'>
-                        <label class='format-focus'>
+                    <div class='form'>
+                        <label class='form-focus'>
                             <input
-                                class='text-format'
                                 type='text'
                                 value={keyword}
                                 placeholder='検索'

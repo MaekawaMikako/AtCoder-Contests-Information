@@ -39,7 +39,7 @@
       top: 0;
       transform: rotate(-45deg);
     }
-    .formats {
+    .forms {
       width: 100%;
       height: 100%;
       position: fixed;
@@ -50,7 +50,7 @@
       transition: .5s;
       padding-top: 20%;
     }
-    .format {
+    .form {
       border-bottom: solid 1px #ffffff;
       list-style: none;
       display: block;
@@ -62,14 +62,14 @@
       padding: 10px;
       position: relative;
     }
-    .format.select {
+    .form.select {
       margin: 15px 10px;
     }
-    .format input[type='text'] {
+    .form input[type='text'] {
       font: 14px sans-serif;
       margin: 10px;
     }
-    #drawer-check:checked ~ .formats {
+    #drawer-check:checked ~ .forms {
       left: 40%;
     }
 }
@@ -94,7 +94,7 @@
     .drawer-hidden {
         display: none;
     }
-    .format.select {
+    .form.select {
         overflow: hidden;
         text-align: center;
         vertical-align: auto;
@@ -103,7 +103,7 @@
         border-radius: 2px;
         background: #ffffff;
     }
-    .format.select::before {
+    .form.select::before {
         position: absolute;
         width: 0;
         height: 0;
@@ -116,10 +116,10 @@
         border-right: 6px solid transparent;
         border-top: 6px solid #666666;
     }
-    .format.select select::-ms-expand {
+    .form.select select::-ms-expand {
         display: none;
     }
-    .format.select select {
+    .form.select select {
         width: 100%;
         cursor: pointer;
         border: none;
@@ -130,7 +130,7 @@
         -webkit-appearance: none;
         appearance: none;
     }
-    .format input[type='text'] {
+    .form input[type='text'] {
         box-sizing: border-box;
         width: 100%;
         padding: 0.3em;
@@ -142,7 +142,7 @@
         border-bottom: 3px solid #000;
         background: transparent;
     }
-    .format-focus input[type='text']:focus {
+    .form-focus input[type='text']:focus {
         border-bottom: 3px solid #337ab7;
         outline: none;
     }
@@ -159,7 +159,7 @@
     .header-logo {
       font-size: 18px;
     }
-    .formats {
+    .forms {
       margin: 0 auto;
     }
 }
@@ -173,22 +173,22 @@
     .header-logo {
       margin: 0 auto 0 50px;
     }
-    .format{
+    .form{
       float: left;
       margin: 20px 50px 20px 0;
     }
-    .format.select {
+    .form.select {
       width: 100px;
       height: 35px;
     }
-    .format.select select {
+    .form.select select {
       padding: 10px 15px;
       font-size: 15px;
     }
-    .format.select select::-ms-expand {
+    .form.select select::-ms-expand {
       display: none;
     }
-    .format input[type='text'] {
+    .form input[type='text'] {
       font: 15px sans-serif;
     }
 }
