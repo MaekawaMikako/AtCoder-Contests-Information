@@ -1,0 +1,69 @@
+@media screen and (min-width:0px){
+    /*0px以上で適用する内容*/
+    .main {
+        border: #337ab7 1px solid;
+        text-align: center;
+        vertical-align: auto;
+        padding-bottom: 3%;
+        padding-top: 18%;
+    }
+    .title {
+        height: 50px;
+        background-color: #337ab7;
+        margin-top: 0;
+        color: #fff;
+        text-align: center;
+        vertical-align: auto;
+    }
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        padding: 5%;
+    }
+    .no-more {
+        margin-bottom: auto;
+        font-size: 20px;
+    }
+    .show-more-button {
+        display: inline-block;
+        padding: 10px 30px;
+        text-decoration: none;
+        background: #ddd;
+        color: #666666;
+        border: #ddd 1px solid;
+        border-radius: 3px;
+        transition: .4s;
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 20px;
+    }
+    .show-more-button:hover {
+        background: #2d2d2d;
+        color: white;
+    }
+}
+
+@media screen and (min-width:500px) {
+    /*500px以上で適用する内容*/
+    .main {
+      width: 500px;
+      margin: 140px auto;
+      padding-top: 0;
+    }
+    .title {
+      height: 35px;
+      width: 95%;
+      padding: 2.5%;
+    }
+    h2 {
+      font-size: 25px;
+      padding: 5px;
+    }
+}
+  
+@media screen and (min-width:1000px) {
+    /*1000px以上で適用する内容*/
+    .main {
+      width: 900px;
+    }
+}

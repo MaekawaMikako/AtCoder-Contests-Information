@@ -1,0 +1,90 @@
+@media screen and (min-width:0px){
+    /*0px以上で適用する内容*/
+    .contests-table {
+        border-bottom: #ddd 1px solid;
+        margin: auto 10px 0px 10px;
+        padding: 0px 10px;
+    }
+    .contest-title {
+        font-size: 15px;
+        color: darkblue;
+        text-decoration: none;
+    }
+    .contest-title:hover {
+        font-size: 14px;
+        color: darkblue;
+        text-decoration: none;
+    }
+    table {
+        margin: 10px auto 30px auto;
+        padding: 8px 30px;
+        border-collapse: collapse;
+        border-top: #ddd 4px solid;
+        padding: 40px 100px;
+    }
+    tr:nth-child(odd) {
+        background-color: rgb(246, 246, 246);
+    }
+    th,td {
+        padding: 8px;
+        border-bottom: #ddd 2px solid;
+        border-collapse: collapse;
+        height: 18px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 13px;
+    }
+    a {
+        color: #337ab7;
+    }
+    a:hover {
+        color: #1a4368;
+    }
+}
+
+@media screen and (min-width:500px) {
+    /*500px以上で適用する内容*/
+    .contests-table {
+        margin: 10px auto;
+        padding: 30px 60px;
+    }
+    .contest-title {
+        font-size: 18px;
+    }
+    .contest-title:hover {
+        font-size: 18px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: 25px auto 30px auto;
+        padding: 20px 100px;
+    }
+    th,td {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /*1000px以上で適用する内容*/
+    .contests-table {
+        margin: 10px auto;
+        padding: 40px 80px;
+    }
+    .contest-title {
+        font-size: 23px;
+    }
+    .contest-title:hover {
+        font-size: 23px;
+    }
+    table {
+        border-collapse: collapse;
+        margin: 25px auto 60px auto;
+        padding: 40px 100px;
+    }
+    th,td {
+        height: 30px;
+        font-size: 15px;
+    }
+}

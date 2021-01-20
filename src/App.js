@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import Header from './Components/Header.js'
-import Main from './Components/Main.js'
+import Header from './Components/Header/index.js'
+import Main from './Components/Main/index.js'
 import axios from 'axios'
 import moment from 'moment'
 
@@ -37,7 +37,7 @@ const App = () => {
   const objectChange = (list) => {
     return list.map(contest => {
       contest.start = moment.unix(contest.start_epoch_second).format('YYYY-MM-DD HH:mm')
-      contest.duration_second = contest.duration_second / 60 + 'min'// => 試験時間(分)
+      contest.duration_second = contest.duration_second / 60 + '分'// => 試験時間(分)
       contest.url = `https://atcoder.jp/contests/${contest.id}`
       return contest
     })
