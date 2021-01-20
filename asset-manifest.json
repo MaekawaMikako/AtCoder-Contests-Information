@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Atcoder-Contests-Information/static/css/main.e12b1f17.chunk.css",
+    "main.css": "/Atcoder-Contests-Information/static/css/main.c02567f7.chunk.css",
     "main.js": "/Atcoder-Contests-Information/static/js/main.fa830585.chunk.js",
     "main.js.map": "/Atcoder-Contests-Information/static/js/main.fa830585.chunk.js.map",
     "runtime-main.js": "/Atcoder-Contests-Information/static/js/runtime-main.1a90347e.js",
@@ -10,13 +10,13 @@
     "static/js/3.a68c09f9.chunk.js": "/Atcoder-Contests-Information/static/js/3.a68c09f9.chunk.js",
     "static/js/3.a68c09f9.chunk.js.map": "/Atcoder-Contests-Information/static/js/3.a68c09f9.chunk.js.map",
     "index.html": "/Atcoder-Contests-Information/index.html",
-    "static/css/main.e12b1f17.chunk.css.map": "/Atcoder-Contests-Information/static/css/main.e12b1f17.chunk.css.map",
+    "static/css/main.c02567f7.chunk.css.map": "/Atcoder-Contests-Information/static/css/main.c02567f7.chunk.css.map",
     "static/js/2.10615f6d.chunk.js.LICENSE.txt": "/Atcoder-Contests-Information/static/js/2.10615f6d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1a90347e.js",
     "static/js/2.10615f6d.chunk.js",
-    "static/css/main.e12b1f17.chunk.css",
+    "static/css/main.c02567f7.chunk.css",
     "static/js/main.fa830585.chunk.js"
   ]
 }
