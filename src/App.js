@@ -26,7 +26,6 @@ const App = () => {
       objectChange(result.data)
       setContestsList(result.data)
       setDisplayList(result.data)
-      console.log(displayCount, 'first')
     } catch (error) {
       // リクエストに失敗した時の処理
       console.log('error!!')

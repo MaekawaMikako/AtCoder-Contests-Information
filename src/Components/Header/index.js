@@ -13,7 +13,6 @@ const Header = (props) => {
         const sorted = sortFilter(searched, sort)
         props.setDisplayList(sorted)
         sortFilter(sort)
-        console.log('type', filterType.target.value, props.contestsList, props.displayList)
     }
 
     // 検索
@@ -22,7 +21,6 @@ const Header = (props) => {
         const searched = searchFilter(type, filterWord.target.value)
         const sorted = sortFilter(searched, sort)
         props.setDisplayList(sorted)
-        console.log('text', filterWord.target.value, props.contestsList, props.displayList)
     }
 
     // 空白のとこ
@@ -33,16 +31,13 @@ const Header = (props) => {
         const regType = new RegExp(`^(?=.*${filterType}).*$`)
         return (props.contestsList.filter((contest) => {
             const toLowerTitle = contest.title.toLowerCase()
-            // console.log(contest.title, 'text:', regWord.test(`${contest.start}${contest.duration_second}${contest.title}${contest.url}${contest.rate_change}`), 'id:', regType.test(`${contest.id}`))
             return regWord.test(`${contest.start}${contest.duration_second}toLowerTitle${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)
         }))
-        console.log(props.contestsList, props.displayList)
     }
 
     // 表示件数
     const displayCountHandleChange = (count) => {
         props.setDisplayCount(+count.target.value)
-        console.log(props.displayCount, 'count')
     }
 
     // 並び替え   ok
@@ -50,7 +45,6 @@ const Header = (props) => {
         setSort(filterSort.target.value)
         const sorted = sortFilter(props.displayList, filterSort.target.value)
         props.setDisplayList(sorted)
-        console.log(filterSort.target.value)
     }
 
     const sortFilter = (searchedList, filterSort) => {
