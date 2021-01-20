@@ -6,7 +6,6 @@ const Main = (props) => {
     // もっと見る   ok
     const onClickShowMore = () => {
         props.setDisplayCount(props.displayCount + 10)
-        console.log(props.displayCount, 'more')
     }
 
     return (
