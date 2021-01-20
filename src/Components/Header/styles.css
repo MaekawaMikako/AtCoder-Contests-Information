@@ -92,8 +92,8 @@
     .drawer-hidden {
         display: none;
     }
-    .form {
-      font-size: 16px;
+    select {
+      font-size:16px;
     }
     .form.select {
         overflow: hidden;
