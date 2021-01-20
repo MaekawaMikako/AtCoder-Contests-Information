@@ -1,6 +1,9 @@
-# AtCoder-Contests-Information
+# Atcoder-Contests-Information
 
-<p align='center'>URL:  https://maekawamikako.github.io/AtCoder-Contests-Information/ </p>
+<p align='center'>
+    <img src='../images/Atcoder-Contests-Information.png' />
+</p>
+<p align='center'>URL:  https://maekawamikako.github.io/Atcoder-Contests-Information/ </p>
 
 ## Description
 AtCoderのコンテスト情報サイトです。
