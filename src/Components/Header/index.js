@@ -31,7 +31,7 @@ const Header = (props) => {
         const regType = new RegExp(`^(?=.*${filterType}).*$`)
         return (props.contestsList.filter((contest) => {
             const toLowerTitle = contest.title.toLowerCase()
-            return regWord.test(`${contest.start}${contest.duration_second}toLowerTitle${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)
+            return regWord.test(`${contest.start}${contest.duration_second}${toLowerTitle}${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)
         }))
     }
 

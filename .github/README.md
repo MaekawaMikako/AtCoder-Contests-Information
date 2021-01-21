@@ -3,11 +3,7 @@
 <p align='center'>
     <img src='../images/Atcoder-Contests-Information.png' />
 </p>
-<p align='center'>URL:  
-    <a href='https://maekawamikako.github.io/Atcoder-Contests-Information/' target='_blank' rel='noopener noreferrer'>
-        https://maekawamikako.github.io/Atcoder-Contests-Information/ 
-    </a>
-</p>
+<p align='center'>URL:  https://maekawamikako.github.io/Atcoder-Contests-Information/ </p>
 
 ## Description
 AtCoderのコンテスト情報サイトです。
