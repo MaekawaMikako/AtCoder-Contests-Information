@@ -79,11 +79,11 @@ const Header = (props) => {
 
     return (
         <div class='header'>
-            <h1 class='header-logo'>Atcoder Contests Information</h1>
+            <h1 class='header-logo'><a href='#' class='header-logo'>Atcoder Contests Information</a></h1>
 
-            <div class="drawer">
-                <input type="checkbox" id="drawer-check" class="drawer-hidden" />
-                <label for="drawer-check" class="drawer-open"><span></span></label>
+            <div class='drawer'>
+                <input type='checkbox' id='drawer-check' class='drawer-hidden' />
+                <label for='drawer-check' class='drawer-open'><span></span></label>
                 <div class='forms'>
                     <div class='form select'>
                         <select onChange={typeHandleChange} value={type}>
