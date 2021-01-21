@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Atcoder-Contests-Information/static/css/main.37d5965c.chunk.css",
-    "main.js": "/Atcoder-Contests-Information/static/js/main.bb053353.chunk.js",
-    "main.js.map": "/Atcoder-Contests-Information/static/js/main.bb053353.chunk.js.map",
+    "main.js": "/Atcoder-Contests-Information/static/js/main.3e1be7aa.chunk.js",
+    "main.js.map": "/Atcoder-Contests-Information/static/js/main.3e1be7aa.chunk.js.map",
     "runtime-main.js": "/Atcoder-Contests-Information/static/js/runtime-main.dd6739c9.js",
     "runtime-main.js.map": "/Atcoder-Contests-Information/static/js/runtime-main.dd6739c9.js.map",
     "static/js/2.f31df422.chunk.js": "/Atcoder-Contests-Information/static/js/2.f31df422.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.dd6739c9.js",
     "static/js/2.f31df422.chunk.js",
     "static/css/main.37d5965c.chunk.css",
-    "static/js/main.bb053353.chunk.js"
+    "static/js/main.3e1be7aa.chunk.js"
   ]
 }
