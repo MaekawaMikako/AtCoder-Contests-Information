@@ -33,8 +33,8 @@ const Header = (props) => {
             const toLowerTitle = contest.title.toLowerCase()
             let cnt = 0
             for (let i = 0; i < filterWordList.length; i++) {
-                const regWord = new RegExp(`.*${filterWordList[i]}.*`)
-                if (regWord.test(`${contest.start}${contest.duration_second}${toLowerTitle}${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)) {
+                const regWord = new RegExp(`^(?=.*${filterWordList[i]}).*$`)
+                if (regWord.test(`${toLowerTitle} | ${contest.start} | ${contest.duration_second} | ${contest.rate_change} | ${contest.url}`) && regType.test(`${contest.id}`)) {
                     cnt++
                 }
             }
