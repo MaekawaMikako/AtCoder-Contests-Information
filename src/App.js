@@ -36,7 +36,7 @@ const App = () => {
   const objectChange = (list) => {
     return list.map(contest => {
       contest.start = moment.unix(contest.start_epoch_second).format('YYYY-MM-DD HH:mm')
-      contest.duration_second = contest.duration_second / 60 + '分'// => 試験時間(分)
+      contest.duration_second = `${contest.duration_second / 60}分`// => 試験時間(分)
       contest.url = `https://atcoder.jp/contests/${contest.id}`
       return contest
     })

@@ -23,15 +23,24 @@ const Header = (props) => {
         props.setDisplayList(sorted)
     }
 
-    // 空白のとこ
     const searchFilter = (filterType, filterWord) => {
         // 大文字小文字対応
         const toLowerWord = filterWord.toLowerCase()
-        const regWord = new RegExp(`.*${toLowerWord}.*`)
+        // 空白で区切って配列生成
+        const filterWordList = toLowerWord.split(/\s+/)
         const regType = new RegExp(`^(?=.*${filterType}).*$`)
         return (props.contestsList.filter((contest) => {
             const toLowerTitle = contest.title.toLowerCase()
-            return regWord.test(`${contest.start}${contest.duration_second}${toLowerTitle}${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)
+            let cnt = 0
+            for (let i = 0; i < filterWordList.length; i++) {
+                const regWord = new RegExp(`.*${filterWordList[i]}.*`)
+                if (regWord.test(`${contest.start}${contest.duration_second}${toLowerTitle}${contest.url}${contest.rate_change}`) && regType.test(`${contest.id}`)) {
+                    cnt++
+                }
+            }
+            if (cnt === filterWordList.length) {
+                return true
+            }
         }))
     }
 
@@ -40,7 +49,7 @@ const Header = (props) => {
         props.setDisplayCount(+count.target.value)
     }
 
-    // 並び替え   ok
+    // 並び替え
     const sortHandleChange = (filterSort) => {
         setSort(filterSort.target.value)
         const sorted = sortFilter(props.displayList, filterSort.target.value)
